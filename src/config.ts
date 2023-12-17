@@ -1,11 +1,10 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://bendemaj.github.io", // replace this with your deployed domain
+  website: "https://ben-www.vercel.app", // replace this with your deployed domain
   author: "Ben Demaj",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
+  desc: "My minimal personal space on the web",
   title: "Ben Demaj - My Workspace",
-  ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
 };
