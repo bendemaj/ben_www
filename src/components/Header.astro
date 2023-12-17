@@ -34,14 +34,14 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
               <img
                 src={`/assets/🌑.png`}
                 id="moon-svg"
-                width="48px"
-                height="48px"
+                width="32px"
+                height="32px"
               />
               <img
                 src={`/assets/🌕.png`}
                 id="sun-svg"
-                width="48px"
-                height="48px"
+                width="32px"
+                height="32px"
               />
             </button>
           )
@@ -50,10 +50,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
           <li>
             <a
               href="/"
-              class:list={{
-                ["hover:text-neutral-900"]: true,
-                ["text-neutral-900"]: pathname === "/",
-              }}
+              
             >
               Home
             </a>
@@ -62,10 +59,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
           <li>
             <a
               href="/posts"
-              class:list={{
-                ["hover:text-neutral-900"]: true,
-                ["text-neutral-900"]: pathname === "/posts",
-              }}
+              
             >
               Posts
             </a>
