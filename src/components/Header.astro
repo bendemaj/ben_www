@@ -26,7 +26,6 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
           SITE.lightAndDarkMode && (
             <button
               id="theme-btn"
-              class="focus-outline"
               title="Toggles light & dark"
               aria-label="auto"
               aria-live="polite"
@@ -34,14 +33,14 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
               <img
                 src={`/assets/🌑.png`}
                 id="moon-svg"
-                width="32px"
-                height="32px"
+                width="48px"
+                height="48px"
               />
               <img
                 src={`/assets/🌕.png`}
                 id="sun-svg"
-                width="32px"
-                height="32px"
+                width="48px"
+                height="48px"
               />
             </button>
           )
