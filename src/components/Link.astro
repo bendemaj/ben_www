@@ -1,0 +1,27 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"a"> & {
+  label: string;
+};
+
+const { label, ...props } = Astro.props;
+---
+
+<a
+  href={props.href}
+  class:list={{
+    ["hover:text-neutral-900 cursor-pointer"]: true,
+  }}
+  {...props}
+  rel="noreferrer"
+>
+  {label}
+  <span class="sr-only">{label} link</span>
+</a>
+
+<style>
+  a {
+    @apply hover:text-skin-accent
+  }
+</style>

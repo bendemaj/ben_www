@@ -23,70 +23,34 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1 class="mr-2">Mingalaba</h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="rss-link"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
-          ><path
-            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
-          ></path><path
-            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
-          ></path><circle cx="6" cy="18" r="2"></circle>
-        </svg>
-      </a>
-
-      <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+      <h1>Hey I'm Ben Demaj</h1>
+      <h2 class="text-md mb-4 sm:text-lg">a student based in 📍Vienna</h2>
+      <p class="text-justify">
+        I am an Austrian developer interested in Hardware and Software
+        Engineering. Currently I am serving my mandatory service <LinkButton
+          className="hover:text-skin-accent"
+          href="https://bundesheer.at"
+          target="_blank"
+        >
+          @bundesheer
+        </LinkButton>
+         as a paramedic. After finishing my duties, I plan to study Electrical
+        Engineering
+        <LinkButton className="hover:text-skin-accent" href="https://tuwien.at">
+          @tuwien.
+        </LinkButton>
+         Outside of work I like to make music and write short stories.
       </p>
       <p>
-        Read the blog posts or check
-        <LinkButton
-          className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
+        For more details of what I am doing <a href="#now">[now]</a>
       </p>
       {
         // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
-            <Socials />
-          </div>
-        )
+        socialCount > 0 && <Socials />
       }
     </section>
 
     <Hr />
-
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data }) => (
-                <Card
-                  href={`/posts/${slugify(data)}`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
-            </ul>
-          </section>
-          <Hr />
-        </>
-      )
-    }
 
     <section id="recent-posts">
       <h2>Recent Posts</h2>
@@ -96,7 +60,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             .filter(({ data }) => !data.featured)
             .map(
               ({ data }, index) =>
-                index < 4 && (
+                index < 3 && (
                   <Card
                     href={`/posts/${slugify(data)}`}
                     frontmatter={data}
@@ -106,16 +70,45 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             )
         }
       </ul>
-      <div class="all-posts-btn-wrapper">
-        <LinkButton href="/posts">
-          All Posts
-          <svg xmlns="http://www.w3.org/2000/svg"
-            ><path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            ></path>
-          </svg>
-        </LinkButton>
+      <div class="flex justify-between">
+        <LinkButton href="/tags">[Tags]</LinkButton>
+        <LinkButton href="/posts">[All Posts]</LinkButton>
       </div>
+    </section>
+    <Hr />
+
+    <section id="now">
+      <div class="mb-5">
+        <h2>What I'm Doing Now</h2>
+        <p>inspired by <LinkButton href="https://sive.rs/now" target="_blank">Derek Sivers</LinkButton></p>
+      </div>
+
+      <p class="mb-5">
+        📚Currently reading: <LinkButton href="https://www.amazon.de/Clockwork-Orange-Fremdsprachentexte-Reclams-Universal-Bibliothek/dp/3150198976/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=OKEHCQGFVN5A&keywords=clockwork+orange+reclam&qid=1702767243&sprefix=clockwork+orange+reclam%2Caps%2C201&sr=8-1" target="_blank">A Clockwork Orange by Anthony Burgess</LinkButton>
+      </p>
+      <div class="mb-5">
+        <h2 class="mb-2">Priorities</h2>
+        <div class="grid grid-rows-1 gap-4 text-justify">
+          <p>
+            <span class="font-semibold text-skin-accent">Finish mandatory service.<br /></span> I want
+            to finish my 6-month mandatory service at the Austrian Armed Forces
+            as a trained paramedic and in good health.
+          </p>
+          <p>
+            <span class="font-semibold text-skin-accent">Becoming an Engineer.<br /></span> Trying to
+            secure an internship at an engineering company, working in the field
+            of robotics, ai and software development. Maybe live in a different
+            city for work and gain experience on working in tech and social
+            interactions.
+          </p>
+          <p>
+            <span class="font-semibold text-skin-accent">Get more fit and athletic.<br /></span> Hit
+            the gym more often and build strength and duration. Try out some
+            martial arts and start rowing.
+          </p>
+        </div>
+      </div>
+      <p class="italic">Last updated on 10th December, before going to sleep</p>
     </section>
   </main>
 
@@ -128,7 +121,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply pb-6 pt-8;
   }
   #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+    @apply my-4 inline-block text-3xl font-semibold sm:my-2 sm:text-4xl;
   }
   #hero .rss-link {
     @apply mb-6;
@@ -156,6 +149,14 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply text-2xl font-semibold tracking-wide;
   }
   .all-posts-btn-wrapper {
-    @apply my-8 text-center;
+    @apply my-8 text-right;
+  }
+
+  #now {
+    @apply pb-6 pt-12;
+  }
+  #now h2,
+  #now h2 {
+    @apply text-2xl font-semibold tracking-wide;
   }
 </style>
