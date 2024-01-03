@@ -28,6 +28,8 @@
   #moon-svg,
   html[data-theme="dark"] #sun-svg {
     display: block;
+    height: 32px;
+    width: 32px;
   }
   body {
     @apply flex min-h-[100svh] flex-col bg-skin-fill font-sans text-skin-base 
