@@ -4,9 +4,9 @@ export const SITE: Site = {
   website: "https://ben-www.vercel.app", // replace this with your deployed domain
   author: "Ben Demaj",
   desc: "My minimal personal space on the web",
-  title: "Ben Demaj - My Workspace",
+  title: "Ben Demaj",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 5,
 };
 
 export const LOCALE = ["en-EN"]; // set to [] to use the environment default

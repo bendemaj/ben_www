@@ -10,7 +10,7 @@ export default function Datetime({ datetime, size = "sm", className }: Props) {
   return (
     <div className={`flex items-center opacity-80 ${className}`}>
       <span className="sr-only">Posted on:</span>
-      <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
+      <span className={` ${size === "sm" ? "text-sm" : "text-base"}`}>
         <FormattedDatetime datetime={datetime} />
       </span>
     </div>

@@ -24,16 +24,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <main id="main-content">
     <section id="hero">
       <h1>Hey I'm Ben Demaj</h1>
-      <h2 class="text-md mb-4 sm:text-lg">a student based in 📍Vienna</h2>
+      <h2 class="text-md mb-4 sm:text-lg">
+        a student based in &#x1F588;Vienna
+      </h2>
       <p class="text-justify">
         I am an Austrian developer interested in Hardware and Software
-        Engineering. Currently I am serving my mandatory service <LinkButton
-          className="hover:text-skin-accent"
-          href="https://bundesheer.at"
-          target="_blank"
-        >
-          @bundesheer
-        </LinkButton>
+        Engineering. Currently I am serving my mandatory service
+        <LinkButton href="https://bundesheer.at" target="_blank">@bundesheer</LinkButton>
          as a paramedic. After finishing my duties, I plan to study Electrical
         Engineering
         <LinkButton className="hover:text-skin-accent" href="https://tuwien.at">
@@ -71,8 +68,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         }
       </ul>
       <div class="flex justify-between">
-        <LinkButton href="/tags">[Tags]</LinkButton>
-        <LinkButton href="/posts">[All Posts]</LinkButton>
+        <LinkButton className="text-skin-base" href="/tags">[Tags]</LinkButton>
+        <LinkButton className="text-skin-base" href="/posts">[All Posts]</LinkButton>
       </div>
     </section>
     <Hr />
@@ -80,31 +77,43 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     <section id="now">
       <div class="mb-5">
         <h2>What I'm Doing Now</h2>
-        <p>inspired by <LinkButton href="https://sive.rs/now" target="_blank">Derek Sivers</LinkButton></p>
+        <p>
+          inspired by <LinkButton href="https://sive.rs/now" target="_blank">
+            Derek Sivers
+          </LinkButton>
+        </p>
       </div>
 
       <p class="mb-5">
-        📚Currently reading: <LinkButton href="https://www.amazon.de/Clockwork-Orange-Fremdsprachentexte-Reclams-Universal-Bibliothek/dp/3150198976/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=OKEHCQGFVN5A&keywords=clockwork+orange+reclam&qid=1702767243&sprefix=clockwork+orange+reclam%2Caps%2C201&sr=8-1" target="_blank">A Clockwork Orange by Anthony Burgess</LinkButton>
+        📚Currently reading: <LinkButton
+          href="https://www.amazon.de/Clockwork-Orange-Fremdsprachentexte-Reclams-Universal-Bibliothek/dp/3150198976/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=OKEHCQGFVN5A&keywords=clockwork+orange+reclam&qid=1702767243&sprefix=clockwork+orange+reclam%2Caps%2C201&sr=8-1"
+          target="_blank"
+        >
+          A Clockwork Orange by Anthony Burgess
+        </LinkButton>
       </p>
       <div class="mb-5">
         <h2 class="mb-2">Priorities</h2>
         <div class="grid grid-rows-1 gap-4 text-justify">
           <p>
-            <span class="font-semibold text-skin-accent">Finish mandatory service.<br /></span> I want
-            to finish my 6-month mandatory service at the Austrian Armed Forces
-            as a trained paramedic and in good health.
+            <span class="font-semibold text-skin-accent"
+              >Finish mandatory service.<br /></span
+            > I want to finish my 6-month mandatory service at the Austrian
+            Armed Forces as a trained paramedic and in good health.
           </p>
           <p>
-            <span class="font-semibold text-skin-accent">Becoming an Engineer.<br /></span> Trying to
-            secure an internship at an engineering company, working in the field
-            of robotics, ai and software development. Maybe live in a different
-            city for work and gain experience on working in tech and social
-            interactions.
+            <span class="font-semibold text-skin-accent"
+              >Becoming an Engineer.<br /></span
+            > Trying to secure an internship at an engineering company, working
+            in the field of robotics, ai and software development. Maybe live in
+            a different city for work and gain experience on working in tech and
+            social interactions.
           </p>
           <p>
-            <span class="font-semibold text-skin-accent">Get more fit and athletic.<br /></span> Hit
-            the gym more often and build strength and duration. Try out some
-            martial arts and start rowing.
+            <span class="font-semibold text-skin-accent"
+              >Get more fit and athletic.<br /></span
+            > Hit the gym more often and build strength and duration. Try out
+            some martial arts and start rowing.
           </p>
         </div>
       </div>
