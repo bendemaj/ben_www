@@ -9,8 +9,6 @@ tags:
 description: "I made a conscious decision to reduce the amount of time I spent on my phone."
 ---
 
-> This article is originally from my [blog post](https://satnaing.dev/blog/posts/how-do-i-develop-my-terminal-portfolio-website-with-react). I put this article to demonstrate how you can write blog posts/articles using AstroPaper theme.
-
 At the start of the New Year, I made a conscious decision to reduce the amount of time I spent on my phone. I realized that the only apps that consumed most of my time were the popular social media platforms such as Instagram, Snapchat, and YouTube. Although I never used TikTok, I had installed it once, but found it overwhelming and harmful to my device.
 
 With this in mind, I decided to delete all these time-consuming apps, bidding farewell to Instagram and Snapchat, and significantly reducing my YouTube watch time to just 10 minutes per day. Unfortunately, due to my phone's Android system, I couldn't delete YouTube altogether, but limiting my time on it was the best option.
