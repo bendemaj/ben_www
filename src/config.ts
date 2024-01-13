@@ -30,7 +30,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "CV",
-    href: "/assets/CV_Demaj.pdf",
+    href: "/assets/CV_Demaj_en.pdf",
     active: true,
   },
 ];
